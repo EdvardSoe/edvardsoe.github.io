@@ -5,89 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edvard Soehus - Portfolio</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #0a192f;
+            color: #ccd6f6;
             line-height: 1.6;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        .container {
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #0a192f;
             padding: 20px;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #hero h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        #hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        #hero a {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 20px;
+            border: 1px solid #64ffda;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        #hero a:hover {
+            background-color: #64ffda;
+            color: #0a192f;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
         }
         .app {
-            border: 1px solid #ddd;
+            margin-bottom: 50px;
+            border: 1px solid #64ffda;
+            padding: 20px;
             border-radius: 8px;
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #f9f9f9;
-        }
-        .app h2 {
-            margin-top: 0;
+            background: #112240;
         }
         .app img {
             max-width: 100%;
             height: auto;
-            border-radius: 4px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
-        .footer {
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 10px;
-            margin-top: 20px;
+        .app h3 {
+            margin: 10px 0;
+            font-size: 24px;
         }
-        a {
-            color: #4CAF50;
+        .app p {
+            font-size: 16px;
+        }
+        .app a {
+            color: #64ffda;
             text-decoration: none;
         }
-        a:hover {
+        .app a:hover {
             text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #112240;
+            color: #8892b0;
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Welcome to Edvard Soehus's Portfolio</h1>
-    <p>Showcasing my projects and applications</p>
-</header>
-<div class="container">
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Hello! I'm Edvard Soehus, a software engineering student specializing in Java development. Below are some of the projects I've worked on, including web apps, mobile apps, and more. Feel free to explore!</p>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <!-- Example App 1 -->
-        <div class="app">
-            <h3>Random Number Generator App</h3>
-            <img src="rngpicture.png" alt="Random Number Generator App Screenshot">
-            <p>This is a javafx-based random number generator which allows for range specification.</p>
-            <p><a href="https://github.com/edvardsoe/RNG">View on GitHub</a></p>
-        </div>
-        <!-- Example App 2 -->
-        <div class="app">
-            <h3>Weather Dashboard</h3>
-            <img src="weather-dashboard-demo.png" alt="Weather Dashboard Screenshot">
-            <p>A dashboard that fetches and visualizes real-time weather data using the OpenWeatherMap API. It includes temperature trends and a city search feature.</p>
-            <p><a href="https://github.com/edvardsoe/weather-dashboard">View on GitHub</a></p>
-        </div>
-        <!-- Placeholder for More Apps -->
-        <div class="app">
-            <h3>Project Title</h3>
-            <img src="placeholder.png" alt="Project Screenshot">
-            <p>Description of the project goes here. Explain its purpose, the technologies used, and its main features.</p>
-            <p><a href="https://github.com/your-repo-link">View on GitHub</a></p>
-        </div>
-    </section>
-</div>
-<footer class="footer">
+<!-- Navbar -->
+<nav>
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://github.com/edvardsoe" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/edvardsoe" target="_blank">LinkedIn</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero">
+    <h1>Hi, I'm Edvard Soehus</h1>
+    <p>I build software solutions and applications using Java and modern web technologies. Scroll down to see my work!</p>
+    <a href="#projects">Check Out My Work</a>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="app">
+        <h3>Task Manager App</h3>
+        <img src="task-manager-demo.png" alt="Task Manager App">
+        <p>A CRUD-based task manager built with Spring Boot and React. Includes user authentication and task prioritization.</p>
+        <a href="https://github.com/edvardsoe/task-manager" target="_blank">View on GitHub</a>
+    </div>
+    <div class="app">
+        <h3>Weather Dashboard</h3>
+        <img src="weather-dashboard-demo.png" alt="Weather Dashboard">
+        <p>A real-time weather dashboard using OpenWeatherMap API. Features temperature trends and city search functionality.</p>
+        <a href="https://github.com/edvardsoe/weather-dashboard" target="_blank">View on GitHub</a>
+    </div>
+    <div class="app">
+        <h3>More Projects Coming Soon!</h3>
+        <p>I'm constantly working on new projects. Stay tuned for updates!</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
     <p>© 2025 Edvard Soehus. All rights reserved.</p>
-    <p><a href="mailto:your-email@example.com">Contact Me</a></p>
 </footer>
 </body>
 </html>
